@@ -1,2 +1,2 @@
-group = "com.example"
+group = "de.kokirigla"
 version = "1.0.0"

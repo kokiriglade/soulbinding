@@ -8,7 +8,6 @@ repositories {
 
 dependencies {
     implementation(libs.shadow)
-    implementation(libs.gremlin.gradle)
     implementation(libs.indra.common)
     implementation(libs.indra.licenseHeader)
     implementation(libs.indra.git)

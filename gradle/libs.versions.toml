@@ -2,7 +2,6 @@
 indra = "3.1.3"
 stylecheck = "0.2.1"
 shadow = "8.3.0"
-gremlin = "0.0.6"
 
 paper = "1.21.4-R0.1-SNAPSHOT"
 
@@ -11,7 +10,6 @@ paper = "1.21.4-R0.1-SNAPSHOT"
 indra-common = { group = "net.kyori", name = "indra-common", version.ref = "indra" }
 indra-licenseHeader = { group = "net.kyori", name = "indra-licenser-spotless", version.ref = "indra" }
 indra-git = { group = "net.kyori", name = "indra-git", version.ref = "indra" }
-gremlin-gradle = { group = "xyz.jpenilla", name = "gremlin-gradle", version.ref = "gremlin" }
 shadow = { group = "com.gradleup.shadow", name = "shadow-gradle-plugin", version.ref = "shadow" }
 
 # development tools (code quality, annotations)

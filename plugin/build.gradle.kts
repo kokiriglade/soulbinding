@@ -2,8 +2,7 @@
 
 plugins {
     id("shadow-platform")
-    id("xyz.jpenilla.resource-factory-bukkit-convention") version "1.2.0"
-//    id("xyz.jpenilla.resource-factory-paper-convention") version "1.2.0" // paper plugin
+    id("xyz.jpenilla.resource-factory-paper-convention") version "1.2.0" // paper plugin
     id("xyz.jpenilla.run-paper") version "2.3.1"
 }
 
@@ -24,9 +23,9 @@ tasks {
     }
 }
 
-bukkitPluginYaml {
+paperPluginYaml {
     main = "${rootProject.group}.${rootProject.name}.TemplatePlugin"
     name = rootProject.name
-    authors.add("somebody")
-    apiVersion = libs.versions.paper.get().split("-R0.1-SNAPSHOT")[0]
+    authors.add("kokiriglade")
+    apiVersion = libs.versions.paper.get()
 }

@@ -16,13 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-package com.example.template;
+package de.kokirigla.soulbinding;
 
 import org.bukkit.plugin.java.JavaPlugin;
 import org.jspecify.annotations.NullMarked;
 
 @NullMarked
-public final class TemplatePlugin extends JavaPlugin {
+public final class SoulbindingPlugin extends JavaPlugin {
 
     @Override
     public void onEnable() {
