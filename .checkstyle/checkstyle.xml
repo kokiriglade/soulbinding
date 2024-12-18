@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC
+    "-//Puppy Crawl//DTD Check Configuration 1.3//EN"
+    "https://checkstyle.org/dtds/configuration_1_3.dtd">
+
+<module name="Checker">
+
+    <property name="charset" value="UTF-8"/>
+    <property name="fileExtensions" value="java, properties, xml"/>
+    <property name="severity" value="error"/>
+
+    <!-- https://checkstyle.org/filefilters/beforeexecutionexclusionfilefilter.html -->
+    <module name="BeforeExecutionExclusionFileFilter">
+        <property name="fileNamePattern" value="module\-info\.java$"/>
+    </module>
+
+    <!-- https://checkstyle.org/checks/whitespace/filetabcharacter.html -->
+    <module name="FileTabCharacter">
+        <property name="eachLine" value="true"/>
+    </module>
+
+    <!-- https://checkstyle.org/checks/misc/newlineatendoffile.html -->
+    <module name="NewlineAtEndOfFile"/>
+
+    <!-- https://checkstyle.org/filters/suppressionfilter.html -->
+    <module name="SuppressionFilter">
+        <property name="file" value="${configDirectory}/suppressions.xml"/>
+    </module>
+
+    <!-- https://checkstyle.org/filters/suppresswarningsfilter.html -->
+    <module name="SuppressWarningsFilter"/>
+
+    <module name="TreeWalker">
+
+        <!-- https://checkstyle.org/checks/misc/arraytypestyle.html -->
+        <module name="ArrayTypeStyle"/>
+
+        <!-- https://checkstyle.org/checks/imports/avoidstarimport.html -->
+        <module name="AvoidStarImport"/>
+
+        <!-- https://checkstyle.org/checks/design/finalclass.html -->
+        <module name="FinalClass"/>
+
+        <!-- https://checkstyle.org/checks/coding/finallocalvariable.html -->
+        <module name="FinalLocalVariable">
+            <property name="tokens" value="PARAMETER_DEF, VARIABLE_DEF"/> <!-- add PARAMETER_DEF -->
+            <property name="validateEnhancedForLoopVariable" value="true"/>
+        </module>
+
+        <!-- https://checkstyle.org/checks/imports/illegalimport.html -->
+        <module name="IllegalImport">
+            <property name="illegalPkgs"
+                      value="sun, jdk, com.sun, org.jetbrains.annotations.Nullable, org.jetbrains.annotations.NotNull"/>
+        </module>
+
+        <!-- https://checkstyle.org/checks/javadoc/invalidjavadocposition.html -->
+        <module name="InvalidJavadocPosition"/>
+
+        <!-- https://checkstyle.org/checks/javadoc/javadoccontentlocation.html -->
+        <module name="JavadocContentLocation"/>
+
+        <!-- https://checkstyle.org/checks/javadoc/javadocmethod.html -->
+        <module name="JavadocMethod"/>
+
+        <!-- https://checkstyle.org/checks/javadoc/javadocmissingwhitespaceafterasterisk.html -->
+        <module name="JavadocMissingWhitespaceAfterAsterisk"/>
+
+        <!-- https://checkstyle.org/checks/javadoc/javadocparagraph.html -->
+        <module name="JavadocParagraph"/>
+
+        <!-- https://checkstyle.org/checks/javadoc/javadoctagcontinuationindentation.html -->
+        <module name="JavadocTagContinuationIndentation"/>
+
+        <!-- https://checkstyle.org/checks/blocks/leftcurly.html -->
+        <module name="LeftCurly"/>
+
+        <!-- https://checkstyle.org/checks/coding/matchxpath.html -->
+        <module name="MatchXpath">
+            <property name="query" value="//ANNOTATION[./IDENT[@text='NotNull']]"/>
+            <message key="matchxpath.match"
+                     value="Avoid using @NotNull annotation. Use @NonNull instead."/>
+        </module>
+
+        <!-- https://checkstyle.org/config_naming.html#MethodName -->
+        <module name="MethodName">
+            <property name="format"
+                      value="^(?:(?:.{1,3})|(?:[gs]et[^A-Z].*)|(?:(?:[^gsA-Z]..|.[^e].|..[^t]).+))$"/>
+        </module>
+
+        <!-- https://checkstyle.org/checks/coding/requirethis.html -->
+        <module name="RequireThis"/>
+
+        <!-- https://checkstyle.org/filters/suppresswarningsfilter.html -->
+        <module name="SuppressWarningsHolder"/>
+
+        <!-- https://checkstyle.org/filters/suppressioncommentfilter.html -->
+        <module name="SuppressionCommentFilter"/>
+
+    </module>
+
+</module>

@@ -1,0 +1,11 @@
+{
+	"pack": {
+		"description": [
+			{
+				"text": "checkerboard world gen",
+				"color": "gray"
+			}
+		],
+		"pack_format": 61
+	}
+}

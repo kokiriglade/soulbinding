@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:overworld",
+    "generator": {
+        "type": "minecraft:noise",
+        "settings": "checkerboard:superflat",
+        "biome_source": {
+            "type": "minecraft:checkerboard",
+            "scale": 0,
+            "biomes": [
+                "checkerboard:light",
+                "checkerboard:dark"
+            ]
+        }
+    }
+}
