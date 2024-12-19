@@ -1,17 +1,13 @@
-//import io.papermc.paperweight.userdev.ReobfArtifactConfiguration.Companion.MOJANG_PRODUCTION // paperweight
-
 plugins {
     id("shadow-platform")
     id("xyz.jpenilla.resource-factory-paper-convention") version "1.2.0" // paper plugin
     id("xyz.jpenilla.run-paper") version "2.3.1"
 }
 
-//paperweight.reobfArtifactConfiguration = MOJANG_PRODUCTION // paperweight
-
 dependencies {
-//    paperweight.paperDevBundle(libs.versions.paper.get()) // paperweight
     compileOnly(libs.paper)
     implementation(project(":${rootProject.name}-api"))
+    implementation(libs.configurate.hocon)
 }
 
 tasks {
@@ -24,8 +20,9 @@ tasks {
 }
 
 paperPluginYaml {
-    main = "${rootProject.group}.${rootProject.name}.TemplatePlugin"
+    main = "${rootProject.group}.${rootProject.name}.Soulbinding"
+    bootstrapper = "${rootProject.group}.${rootProject.name}.SoulbindingBootstrap"
     name = rootProject.name
     authors.add("kokiriglade")
-    apiVersion = libs.versions.paper.get()
+    apiVersion = libs.versions.paper.get().split("-R0.1-SNAPSHOT")[0]
 }

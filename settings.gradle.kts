@@ -1,10 +1,17 @@
 dependencyResolutionManagement {
     repositories {
         mavenCentral()
-
         maven {
             name = "papermc"
             url = uri("https://repo.papermc.io/repository/maven-public/")
+        }
+        maven {
+            name = "spongepowered"
+            url = uri("https://repo.spongepowered.org/maven/")
+
+            mavenContent {
+                includeModule("org.spongepowered", "configurate-hocon")
+            }
         }
     }
 }

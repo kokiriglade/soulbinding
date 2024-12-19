@@ -1,7 +1,7 @@
 /*
- * <one line to give the program's name and a brief idea of what it does.>
+ * Soulbinding
  *
- * Copyright (C) <year>  <name of author>
+ * Copyright (C) 2024 kokiriglade
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,15 +18,28 @@
  */
 package de.kokirigla.soulbinding;
 
+import de.kokirigla.soulbinding.configuration.MainConfig;
+import de.kokirigla.soulbinding.listener.DeathListener;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.jspecify.annotations.NullMarked;
 
 @NullMarked
-public final class SoulbindingPlugin extends JavaPlugin {
+public final class Soulbinding extends JavaPlugin {
+
+    private final MainConfig config;
+
+    public Soulbinding(final MainConfig config) {
+        super();
+        this.config = config;
+    }
 
     @Override
     public void onEnable() {
-        getSLF4JLogger().info("Hello World!");
+        getServer().getPluginManager().registerEvents(new DeathListener(this), this);
+    }
+
+    public MainConfig config() {
+        return config;
     }
 
 }
