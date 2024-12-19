@@ -1,17 +1,7 @@
-# template
+# Soulbinding
 
-Template to easily create Bukkit plugins for [paper](https://github.com/PaperMC/Paper). It is pretty
-heavily inspired by [Carbon](https://github.com/Hexaoxide/Carbon)'s project layout.
-This template was made as a personal convenience; I don't have any interest in providing support for
-usage, but PR's are welcome. :)
-
-## Assumptions
-
-This template makes a few assumptions based solely on my personal preference:
-- Licensed under the [GPL](license.txt).
-- Shades jpenilla's [gremlin](https://github.com/jpenilla/gremlin-gradle).
-- Replaces the overworld on the test server with a custom generated checkerboard pattern (see [the datapack](plugin/run/world/datapacks/checkerboard))
-
+Introduces the "Soulbound" enchantment, obtainable as a rare drop from the Ender Dragon. Items with 
+Soulbound stay in the player’s inventory after death. Works on weapons, armor, and tools.
 ### Checkstyle
 
 This template uses (a fork of) checkstyle to ensure code style is consistent across the entire project.  

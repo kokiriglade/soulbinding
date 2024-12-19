@@ -12,6 +12,8 @@ tasks {
     shadowJar {
         dependsOn(check)
         archiveClassifier.set(null as String?)
+        relocateDependency("io.leangen.geantyref")
+        relocateDependency("org.spongepowered.configurate")
     }
 }
 
